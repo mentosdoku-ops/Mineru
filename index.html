@@ -2,88 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MINERU - Gestión Minera</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0b0b0b;
-      color: #ffffff;
+    :root{--fondo:#0a0f1a;--card:#111827;--accent:#d4af37;--text:#e5e7eb;--muted:#9ca3af}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:var(--fondo);color:var(--text)}
+
+    header{
+      background:linear-gradient(rgba(10,15,26,.85),rgba(10,15,26,.85)),
+      url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+      background-size:cover;background-position:center;
+      text-align:center;padding:120px 20px
     }
 
-    header {
-      background: #111;
-      text-align: center;
-      padding: 40px 20px;
-      border-bottom: 2px solid #c9a227;
-    }
+    header h1{font-size:56px;color:var(--accent)}
+    header p{color:var(--muted);margin-top:10px}
 
-    h1 {
-      margin: 0;
-      font-size: 42px;
-      color: #c9a227;
-      letter-spacing: 2px;
-    }
+    nav{position:sticky;top:0;background:#020617;padding:15px;text-align:center;border-bottom:1px solid #1f2937}
+    nav a{color:var(--text);margin:0 18px;text-decoration:none}
+    nav a:hover{color:var(--accent)}
 
-    nav {
-      background: #0f0f0f;
-      text-align: center;
-      padding: 12px;
-    }
+    section{max-width:1100px;margin:60px auto;padding:20px}
+    .titulo{text-align:center;margin-bottom:30px;color:var(--accent)}
 
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
 
-    nav a:hover {
-      color: #c9a227;
-    }
+    .card{background:var(--card);padding:20px;border-radius:14px;border:1px solid #1f2937}
+    .card:hover{transform:translateY(-6px);border-color:var(--accent)}
+    .card img{width:100%;border-radius:10px}
 
-    section {
-      max-width: 900px;
-      margin: 25px auto;
-      background: #141414;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(201, 162, 39, 0.2);
-    }
+    .beneficios{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .beneficio{background:var(--card);padding:20px;border-radius:10px;text-align:center}
 
-    h2 {
-      color: #c9a227;
-    }
+    .cta{background:#111827;padding:40px;text-align:center;border-radius:12px}
 
-    .card {
-      background: #1c1c1c;
-      padding: 15px;
-      margin-top: 10px;
-      border-left: 4px solid #c9a227;
-    }
+    .faq-item,.testimonio{background:var(--card);padding:15px;border-radius:8px;margin-bottom:15px}
+    .faq-item h4{color:var(--accent)}
 
-    .boton {
-      display: inline-block;
-      background: #c9a227;
-      color: #000;
-      padding: 12px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+    .boton{display:inline-block;margin-top:20px;padding:12px 22px;background:var(--accent);color:#000;text-decoration:none;border-radius:6px;font-weight:600}
 
-    .boton:hover {
-      background: #e0b93a;
-    }
+    .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px;border-radius:50%;font-size:20px;text-decoration:none}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #111;
-      color: #aaa;
-    }
+    footer{background:#020617;text-align:center;padding:20px;color:var(--muted)}
   </style>
 </head>
 
@@ -91,61 +55,106 @@
 
 <header>
   <h1>MINERU</h1>
-  <p>Gestión y asesoría en trámites mineros en el Perú</p>
+  <p style="font-size:20px">Asesoría minera profesional en todo el Perú</p>
+
+  <p style="max-width:700px;margin:20px auto">
+    Evita errores, retrasos y pérdida de dinero. Nosotros nos encargamos de tus trámites mineros de inicio a fin.
+  </p>
+
+  <a class="boton" href="#contacto">Solicitar Asesoría Ahora</a>
+
+  <p style="margin-top:20px;font-size:14px">✔ Respuesta rápida ✔ Atención personalizada ✔ Resultados seguros</p>
 </header>
 
 <nav>
-  <a href="#inicio">Inicio</a>
+  <a href="#">Inicio</a>
   <a href="#servicios">Servicios</a>
-  <a href="#info">Información</a>
+  <a href="#beneficios">Ventajas</a>
+  <a href="#faq">Preguntas</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
-<section id="inicio">
-  <h2>Bienvenido a MINERU</h2>
-  <p>
-    Brindamos gestión y asesoría en trámites mineros como petitorios,
-    seguimiento de expedientes y reclamos administrativos.
-  </p>
+<section id="beneficios">
+  <h2 class="titulo">¿Por qué elegir MINERU?</h2>
+  <div class="beneficios">
+    <div class="beneficio">✔ Ahorro de tiempo y dinero</div>
+    <div class="beneficio">✔ Evitamos errores en trámites</div>
+    <div class="beneficio">✔ Seguimiento completo</div>
+    <div class="beneficio">✔ Atención directa por WhatsApp</div>
+  </div>
 </section>
 
 <section id="servicios">
-  <h2>Servicios</h2>
+  <h2 class="titulo">Servicios</h2>
+  <div class="grid">
 
-  <div class="card">
-    <strong>⛏️ Petitorios mineros</strong>
-    <p>Apoyo en la presentación y seguimiento de solicitudes.</p>
-  </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091215367-59ab6b7c8f06">
+      <h3>Petitorios Mineros</h3>
+      <p>Te ayudamos a obtener tu concesión minera sin errores.</p>
+    </div>
 
-  <div class="card">
-    <strong>📁 Expedientes</strong>
-    <p>Seguimiento del estado de trámites ante la autoridad minera.</p>
-  </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+      <h3>Expedientes</h3>
+      <p>Seguimiento constante de tu trámite hasta finalizar.</p>
+    </div>
 
-  <div class="card">
-    <strong>⚖️ Reclamos</strong>
-    <p>Gestión y apoyo en procesos administrativos mineros.</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
+      <h3>Reclamos</h3>
+      <p>Defendemos tus derechos en procesos administrativos.</p>
+    </div>
+
   </div>
 </section>
 
-<section id="info">
-  <h2>Información</h2>
-  <p>
-    Te ayudamos a gestionar tus trámites mineros de forma clara, ordenada y eficiente,
-    evitando errores y retrasos.
-  </p>
+<section>
+  <div class="cta">
+    <h2>¿Listo para avanzar con tu trámite?</h2>
+    <p>No pierdas tiempo, contáctanos ahora mismo.</p>
+    <a class="boton" href="#contacto">Hablar por WhatsApp</a>
+  </div>
+</section>
+
+<section id="faq">
+  <h2 class="titulo">Preguntas Frecuentes</h2>
+
+  <div class="faq-item">
+    <h4>¿Cuánto cuesta el servicio?</h4>
+    <p>El costo depende del trámite. Escríbenos y te damos información clara sin compromiso.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>¿Trabajan en todo el Perú?</h4>
+    <p>Sí, atendemos clientes a nivel nacional.</p>
+  </div>
+
+</section>
+
+<section>
+  <h2 class="titulo">Testimonios</h2>
+
+  <div class="testimonio"><p>"Me ayudaron con todo mi petitorio minero sin errores, muy recomendados."</p><strong>- Juan Pérez</strong></div>
+  <div class="testimonio"><p>"Servicio rápido y confiable, siempre atentos a mi trámite."</p><strong>- Carlos Ramos</strong></div>
+  <div class="testimonio"><p>"No sabía por dónde empezar y ellos resolvieron todo."</p><strong>- Luis Huamán</strong></div>
+  <div class="testimonio"><p>"Excelente asesoría, evité muchos problemas gracias a ellos."</p><strong>- José Quispe</strong></div>
+  <div class="testimonio"><p>"Muy profesionales y claros en todo momento."</p><strong>- Miguel Torres</strong></div>
+
 </section>
 
 <section id="contacto">
-  <h2>Contacto</h2>
+  <h2 class="titulo">Contacto</h2>
 
-  <p>📱 WhatsApp: +51 941 133 196</p>
-  <p>📧 Correo: jesusvizcarra758@gmail.com</p>
+  <p style="text-align:center">WhatsApp: +51 941 133 196</p>
+  <p style="text-align:center">Correo: jesusvizcarra758@gmail.com</p>
 
-  <a class="boton" href="https://wa.me/51941133196" target="_blank">
-    Escribirme por WhatsApp
-  </a>
+  <div style="text-align:center">
+    <a class="boton" href="https://wa.me/51941133196" target="_blank">Escribir por WhatsApp</a>
+  </div>
 </section>
+
+<a class="whatsapp" href="https://wa.me/51941133196" target="_blank">💬</a>
 
 <footer>
   <p>© 2026 MINERU</p>
