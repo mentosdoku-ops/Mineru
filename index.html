@@ -22,7 +22,7 @@
     header h1{font-size:56px;color:var(--accent)}
     header p{color:var(--muted);margin-top:10px}
 
-    nav{position:sticky;top:0;background:#020617;padding:15px;text-align:center;border-bottom:1px solid #1f2937}
+    nav{position:sticky;top:0;background:#020617;padding:15px;text-align:center;border-bottom:1px solid #1f2937;z-index:1000}
     nav a{color:var(--text);margin:0 18px;text-decoration:none}
     nav a:hover{color:var(--accent)}
 
@@ -33,7 +33,7 @@
 
     .card{background:var(--card);padding:20px;border-radius:14px;border:1px solid #1f2937}
     .card:hover{transform:translateY(-6px);border-color:var(--accent)}
-    .card img{width:100%;border-radius:10px}
+    .card img{width:100%;border-radius:10px;height:180px;object-fit:cover}
 
     .beneficios{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
     .beneficio{background:var(--card);padding:20px;border-radius:10px;text-align:center}
@@ -44,8 +44,6 @@
     .faq-item h4{color:var(--accent)}
 
     .boton{display:inline-block;margin-top:20px;padding:12px 22px;background:var(--accent);color:#000;text-decoration:none;border-radius:6px;font-weight:600}
-
-    .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px;border-radius:50%;font-size:20px;text-decoration:none}
 
     footer{background:#020617;text-align:center;padding:20px;color:var(--muted)}
   </style>
@@ -61,9 +59,11 @@
     Evita errores, retrasos y pérdida de dinero. Nosotros nos encargamos de tus trámites mineros de inicio a fin.
   </p>
 
-  <a class="boton" href="#contacto">Solicitar Asesoría Ahora</a>
+  <a class="boton" href="#contacto">Contactar por correo</a>
 
-  <p style="margin-top:20px;font-size:14px">✔ Respuesta rápida ✔ Atención personalizada ✔ Resultados seguros</p>
+  <p style="margin-top:20px;font-size:14px">
+    ✔ Respuesta rápida ✔ Atención personalizada ✔ Resultados seguros
+  </p>
 </header>
 
 <nav>
@@ -80,7 +80,7 @@
     <div class="beneficio">✔ Ahorro de tiempo y dinero</div>
     <div class="beneficio">✔ Evitamos errores en trámites</div>
     <div class="beneficio">✔ Seguimiento completo</div>
-    <div class="beneficio">✔ Atención directa por WhatsApp</div>
+    <div class="beneficio">✔ Atención personalizada</div>
   </div>
 </section>
 
@@ -113,7 +113,7 @@
   <div class="cta">
     <h2>¿Listo para avanzar con tu trámite?</h2>
     <p>No pierdas tiempo, contáctanos ahora mismo.</p>
-    <a class="boton" href="#contacto">Hablar por WhatsApp</a>
+    <a class="boton" href="#contacto">Enviar correo</a>
   </div>
 </section>
 
@@ -140,21 +140,19 @@
   <div class="testimonio"><p>"No sabía por dónde empezar y ellos resolvieron todo."</p><strong>- Luis Huamán</strong></div>
   <div class="testimonio"><p>"Excelente asesoría, evité muchos problemas gracias a ellos."</p><strong>- José Quispe</strong></div>
   <div class="testimonio"><p>"Muy profesionales y claros en todo momento."</p><strong>- Miguel Torres</strong></div>
-
 </section>
 
 <section id="contacto">
   <h2 class="titulo">Contacto</h2>
 
-  <p style="text-align:center">WhatsApp: +51 941 133 196</p>
   <p style="text-align:center">Correo: jesusvizcarra758@gmail.com</p>
 
   <div style="text-align:center">
-    <a class="boton" href="https://wa.me/51941133196" target="_blank">Escribir por WhatsApp</a>
+    <a class="boton" href="mailto:jesusvizcarra758@gmail.com">
+      Enviar correo
+    </a>
   </div>
 </section>
-
-<a class="whatsapp" href="https://wa.me/51941133196" target="_blank">💬</a>
 
 <footer>
   <p>© 2026 MINERU</p>
